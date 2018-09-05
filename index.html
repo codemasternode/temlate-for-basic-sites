@@ -24,37 +24,74 @@
             <img src="./img/united-kingdom-flag-round-icon-32.png" alt="UK flag">
         </div>
     </nav>
-    <section class="slider">
-        <ul>
-            <li class="slide">
-                <div class="arrow">
-                    <i class="fas fa-arrow-left fa-3x"></i>
+    <section class="slider-wrapper">
+        <span id="arrow-left" class="fas fa-arrow-left fa-3x arrow"></span>
+        <div class="slider">
+            <div class="slide slide1">
+                <div class="slide-content">
+                    <span>Image one</span>
                 </div>
-                <img src="./img/Slajder-3-Laboratorium-1920x1050.jpg" alt="jeden">
-                <div class="arrow">
-                    <i class="fas fa-arrow-right fa-3x"></i>
+            </div>
+            <div class="slide slide2">
+                <div class="slide-content">
+                    <span>Image two</span>
                 </div>
-            </li>
-            <li class="slide">
-                <div class="arrow">
-                    <i class="fas fa-arrow-left fa-3x"></i>
+            </div>
+            <div class="slide slide3">
+                <div class="slide-content">
+                    <span>Image three</span>
                 </div>
-                <img src="./img/laboratorium-21968734.jpg" alt="dwa">
-                <div class="arrow">
-                    <i class="fas fa-arrow-right fa-3x"></i>
-                </div>
-            </li>
-            <li class="slide">
-                <div class="arrow">
-                    <i class="fas fa-arrow-left fa-3x"></i>
-                </div>
-                <img src="./img/images.jpg" alt="trzy">
-                <div class="arrow">
-                    <i class="fas fa-arrow-right fa-3x"></i>
-                </div>
-            </li>
-        </ul>
+            </div>
+        </div>
+        <span id="arrow-right" class="fas fa-arrow-right arrow fa-3x"></span>
     </section>
+    <script>
+        let sliderImages = document.querySelectorAll('.slide'),
+            arrowLeft = document.querySelector('#arrow-left'),
+            arrowRight = document.querySelector('#arrow-right'),
+            current = 0
+
+        //Clear images
+        function reset() {
+            for (let i = 0; i < sliderImages.length; i++) {
+                sliderImages[i].style.display = 'none'
+            }
+        }
+
+        //Init slider
+        function startSlide() {
+            reset()
+            sliderImages[0].style.display = 'block'
+        }
+
+        function sliderLeft() {
+            reset()
+            sliderImages[current - 1].style.display = 'block'
+            current--
+        }
+
+        function sliderRight() {
+            reset()
+            sliderImages[current + 1].style.display = 'block'
+            current++
+        }
+
+        arrowLeft.addEventListener('click', function () {
+            if (current === 0) {
+                current = sliderImages.length
+            }
+            sliderLeft()
+        })
+
+        arrowRight.addEventListener('click', function () {
+            if(current === sliderImages.length - 1) {
+                current = -1
+            }
+            sliderRight()
+        })
+
+        startSlide()
+    </script>
 </body>
 
 </html>
