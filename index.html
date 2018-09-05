@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -25,73 +26,62 @@
         </div>
     </nav>
     <section class="slider-wrapper">
-        <span id="arrow-left" class="fas fa-arrow-left fa-3x arrow"></span>
         <div class="slider">
-            <div class="slide slide1">
-                <div class="slide-content">
-                    <span>Image one</span>
-                </div>
-            </div>
-            <div class="slide slide2">
-                <div class="slide-content">
-                    <span>Image two</span>
-                </div>
-            </div>
-            <div class="slide slide3">
-                <div class="slide-content">
-                    <span>Image three</span>
-                </div>
-            </div>
+            <img class="mySlides" src="./img/image1.jpg">
+            <img class="mySlides" src="./img/image3.jpg">
         </div>
-        <span id="arrow-right" class="fas fa-arrow-right arrow fa-3x"></span>
     </section>
+    <section class="container">
+        <div class="logo">
+            <img src="./img/logo.png" alt="logo">
+        </div>
+    </section>
+    <main>
+        <h1 class="primary-header">Aktualoności</h1>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li>
+                        <h3>O nas</h3>
+                    </li>
+                    <li>
+                        <h3>Oferta</h3>
+                    </li>
+                    <li>
+                        <h3>Technologie/materiały</h3>
+                    </li>
+                    <li>
+                        <h3>Realizacje/referencje</h3>
+                    </li>
+                    <li>
+                        <h3>Do pobrania</h3>
+                    </li>
+                    <li>
+                        <h3>Kontakt</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </main>
     <script>
-        let sliderImages = document.querySelectorAll('.slide'),
-            arrowLeft = document.querySelector('#arrow-left'),
-            arrowRight = document.querySelector('#arrow-right'),
-            current = 0
+        var slideIndex = 0;
+        carousel();
 
-        //Clear images
-        function reset() {
-            for (let i = 0; i < sliderImages.length; i++) {
-                sliderImages[i].style.display = 'none'
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
             }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 10000); // Change image every 2 seconds
         }
-
-        //Init slider
-        function startSlide() {
-            reset()
-            sliderImages[0].style.display = 'block'
-        }
-
-        function sliderLeft() {
-            reset()
-            sliderImages[current - 1].style.display = 'block'
-            current--
-        }
-
-        function sliderRight() {
-            reset()
-            sliderImages[current + 1].style.display = 'block'
-            current++
-        }
-
-        arrowLeft.addEventListener('click', function () {
-            if (current === 0) {
-                current = sliderImages.length
-            }
-            sliderLeft()
-        })
-
-        arrowRight.addEventListener('click', function () {
-            if(current === sliderImages.length - 1) {
-                current = -1
-            }
-            sliderRight()
-        })
-
-        startSlide()
     </script>
+
 </body>
 
 </html>
