@@ -40,4 +40,9 @@ q:before, q:after {
     content: '';
     content: none;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 /* END OF RESETING BROWSER STYLES */

@@ -1,0 +1,25 @@
+.slider {
+    width: 100%;
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    li {
+        width: 100%;
+        img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
