@@ -1,16 +1,8 @@
 /*** COLORS ***/
-$primary-dark: #06888A;
-$primary-light: #FFEED5;
-$primary-mid: #DC664A;
-$secondary-dark: #5A3928;
-$secondary-light: #FDC149;
+$primary: white;
+$secondary: #4e5560;
 
 /*** USABLE VARIABLES ***/
-$page-background: $primary-light;
-$headline-color: $primary-dark;
-$text-color: $primary-dark;
-$border-light: $secondary-light;
-$border-dark: $primary-dark;
 
 /*** FONTS ***/
 $headline-font: 'Varela Round', Helvetica, Arial, sans-serif;
@@ -20,3 +12,5 @@ $body-font: 'Palatino Linotype', Baskerville, serif;
 $screen-small : 400px;
 $screen-medium : 760px;
 $screen-large: 1000px;
+
+
