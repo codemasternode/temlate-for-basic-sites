@@ -25,13 +25,13 @@
             <img src="./img/united-kingdom-flag-round-icon-32.png" alt="UK flag">
         </div>
     </nav>
-    <section class="slider-wrapper">
+    <section class="slider-wrapper sticky">
         <div class="slider">
             <img class="mySlides" src="./img/image1.jpg">
             <img class="mySlides" src="./img/image3.jpg">
         </div>
     </section>
-    <section class="container">
+    <section class="container" id="content">
         <div class="logo">
             <img src="./img/logo.png" alt="logo">
         </div>
@@ -102,6 +102,29 @@
     <script>
         var slideIndex = 0;
         carousel();
+        let slider = document.querySelector('.slider-wrapper')
+        let content = document.querySelector('#content')
+        let sliderImage = document.querySelector('.mySlides')
+
+        onResize()
+        onScroll()
+
+        function onResize() {
+            let windowWidth = window.innerWidth
+            if (windowWidth > 1050) {
+                slider.style.top = - (windowWidth / 4) + 'px'
+            }
+        }
+
+        function onScroll() {
+            let top = parseInt(slider.style.top)
+            if (slider.getBoundingClientRect().top === top) {
+                slider.style.webkitFilter = "grayscale(100%)"
+            }
+        }
+
+        window.addEventListener("resize", onResize)
+        window.addEventListener("scroll", onScroll)
 
         function carousel() {
             var i;
