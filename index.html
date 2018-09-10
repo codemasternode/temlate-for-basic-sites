@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sam niewiem co to</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -25,10 +27,19 @@
             <img src="./img/united-kingdom-flag-round-icon-32.png" alt="UK flag">
         </div>
     </nav>
-    <section class="slider-wrapper sticky">
-        <div class="slider">
-            <img class="mySlides" src="./img/image1.jpg">
-            <img class="mySlides" src="./img/image3.jpg">
+    <section class="slider-wrapper">
+        <div class="slider" id="slider">
+            <button class="w3-button button-direct button-left" onclick="plusDivs(-1)" id="left">&#10094;</button>
+            <div class="mySlides">
+                <img src="./img/DSC_9903.jpg" alt="jeden" class="slide_image">
+            </div>
+            <div class="mySlides">
+                <img src="./img/DSC_9918.jpg" alt="dwa" class="slide_image">
+            </div>
+            <div class="mySlides">
+                <img src="./img/DSC_9920.jpg" alt="jeden" class="slide_image">
+            </div>
+            <button class="w3-button button-direct button-right" onclick="plusDivs(+1)" id="right">&#10095;</button>
         </div>
     </section>
     <section class="container" id="content">
@@ -99,56 +110,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        var slideIndex = 0;
-        carousel();
-        let slider = document.querySelector('.slider-wrapper')
-        let content = document.querySelector('#content')
-        let sliderImage = document.querySelector('.mySlides')
-        let brighteness_count = 1
-        let last_scroll = 0
-
-        onResize()
-        onScroll()
-
-        function onResize() {
-            let windowWidth = window.innerWidth
-            if (windowWidth > 1050) {
-                slider.style.top = - (windowWidth / 4) + 'px'
-            }
-        }
-
-        function onScroll() {
-            let top = parseInt(slider.style.top)
-            let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
-            if (slider.getBoundingClientRect().top === top) {
-                if (brighteness_count < 60 && currentScroll > 0 && last_scroll <= currentScroll) {
-                    slider.style.webkitFilter = "brightness(" + (100 - brighteness_count) + "%)"
-                    brighteness_count++
-                    last_scroll = currentScroll
-                }
-            } else {
-                slider.style.webkitFilter = "brightness(100%)"
-                brighteness_count = 1
-            }
-        }
-
-        window.addEventListener("resize", onResize)
-        window.addEventListener("scroll", onScroll)
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) { slideIndex = 1 }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 10000); // Change image every 2 seconds
-        }
-    </script>
-
+    <script src="./js/home.js"></script>
 </body>
 
 </html>

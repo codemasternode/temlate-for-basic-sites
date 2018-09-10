@@ -1,6 +1,27 @@
 .slider-wrapper, .slider {
     width: 100%;
+}
 
+.slider {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.button-direct {
+    position: absolute;
+    top: 0;
+    height: 100% !important;
+    color: white;
+    background: $secondary;
+}
+
+.button-left {
+    left: 0;
+}
+
+.button-right {
+    right: 0;
 }
 
 .slider {
