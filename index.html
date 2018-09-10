@@ -105,6 +105,8 @@
         let slider = document.querySelector('.slider-wrapper')
         let content = document.querySelector('#content')
         let sliderImage = document.querySelector('.mySlides')
+        let brighteness_count = 1
+        let last_scroll = 0
 
         onResize()
         onScroll()
@@ -118,8 +120,16 @@
 
         function onScroll() {
             let top = parseInt(slider.style.top)
+            let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
             if (slider.getBoundingClientRect().top === top) {
-                slider.style.webkitFilter = "grayscale(100%)"
+                if (brighteness_count < 60 && currentScroll > 0 && last_scroll <= currentScroll) {
+                    slider.style.webkitFilter = "brightness(" + (100 - brighteness_count) + "%)"
+                    brighteness_count++
+                    last_scroll = currentScroll
+                }
+            } else {
+                slider.style.webkitFilter = "brightness(100%)"
+                brighteness_count = 1
             }
         }
 
