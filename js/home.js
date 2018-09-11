@@ -1,11 +1,6 @@
 let slideIndex = 1;
 let buttonsDirect = document.querySelectorAll('.button-direct')
 let slider = document.querySelector('#slider')
-let left = document.querySelector('#left')
-let right = document.querySelector('#right')
-
-
-
 
 showDivs(slideIndex);
 
