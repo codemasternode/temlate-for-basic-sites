@@ -47,6 +47,7 @@ h6 {
 
 p {
     font-size: $paragraph-size;
+    text-align: justify;
 }
 
 .primary-header {
@@ -55,5 +56,19 @@ p {
 }
 
 .section-paragraph {
-    padding: 0 4rem;
+    padding: 0 8rem;
+    max-width: 1200px;
+    margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 950px) {
+    .section-paragraph {
+        padding: 0 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-paragraph {
+        padding: 0;
+    }
 }
