@@ -5,7 +5,8 @@
 .slider {
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: 90vh;
+    max-height: 700px;
 }
 
 .button-direct {
@@ -13,7 +14,7 @@
     top: 0;
     height: 100% !important;
     color: white;
-    background: $secondary;
+    background: $third;
 }
 
 .button-left {
@@ -25,7 +26,7 @@
 }
 
 .slider {
-    
+    margin-bottom: 2rem;
     img {
         width: 100%;
         display: block;

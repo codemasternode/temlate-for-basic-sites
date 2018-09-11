@@ -1,19 +1,33 @@
 /*** COLORS ***/
 $primary: white;
 $secondary: #364135;
+$third: rgb(179, 179, 179);
+$primary-orange: #F36E1E;
+$primary-blue: #3575B8;
 
 /*** USABLE VARIABLES ***/
 
 /*** FONTS ***/
-$headline-font: 'Varela Round', Helvetica, Arial, sans-serif;
-$body-font: 'Palatino Linotype', Baskerville, serif;
+$headline-font: 'Roboto', sans-serif;
+$body-font: 'Lato', sans-serif;
+
+/*** Default font size ***/
+$h1-default-size: 32px;
+$h2-default-size: 24px;
+$h3-default-size: 18px;
+$h4-default-size: 16px;
+$h5-default-size: 13px;
+$h6-default-size: 10px;
+
+$paragraph-size: 16px;
+
 
 /*** SCREEN RESOLUTIONS ***/
 $screen-small : 400px;
 $screen-medium : 760px;
 $screen-large: 1000px;
 
-$container-padding: 4em 2em;
+$container-padding: 3em 3em;
 $container-padding-small: 3em 15px;
 
 

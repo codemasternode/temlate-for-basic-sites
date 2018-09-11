@@ -9,10 +9,12 @@
     border: 2px solid gray;
     margin-top: 5px;
     width: 300px;
+    border-radius: 4px;
     &:hover{
         cursor: pointer;
-        color: blue;
-        border-color: blue;
+        color: $primary-blue;
+        border-color: $primary-blue;
+        box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
     }
     @media screen and (max-width: $screen-small) {
         font-size: 13px;

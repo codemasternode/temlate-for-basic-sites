@@ -1,8 +1,59 @@
 * {
-    color: black;
+    color: $secondary;
+    font-family: $body-font;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $headline-font;
+    font-weight: bold; 
+    width: 100%;
+}
+
+h1 {
+    font-size: $h1-default-size;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: $h2-default-size;
+    margin-bottom: 1.8rem;
+    margin-top: 1.8rem;
+}
+
+h3 {
+    font-size: $h3-default-size;
+    margin-bottom: 1.6rem;
+    margin-top: 1.6rem;
+}
+
+h4 {
+    font-size: $h4-default-size;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+h5 {
+    font-size: $h5-default-size;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+h6 {
+    font-size: $h6-default-size;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+p {
+    font-size: $paragraph-size;
 }
 
 .primary-header {
     width: 100%;
     text-align: center;
+}
+
+.section-paragraph {
+    padding: 0 4rem;
 }
