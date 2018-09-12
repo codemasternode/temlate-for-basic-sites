@@ -1,38 +1,24 @@
-.slider-wrapper, .slider {
-    width: 100%;
+.flexslider {
+    height: calc(100vh - 90px);
 }
 
-.slider {
-    overflow: hidden;
-    position: relative;
-    height: 90vh;
-    max-height: 700px;
-    border: 1px solid $third;
+.slider-wrapper {
+    height: calc(100vh - 90px);
+    margin-bottom: 50px;
 }
 
-.button-direct {
-    position: absolute;
-    top: 0;
-    height: 100% !important;
-    color: white;
-    background: $third;
+.bx-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
 }
 
-.button-left {
-    left: 0;
-}
-
-.button-right {
-    right: 0;
-}
-
-.slider {
-    margin-bottom: 2rem;
-    img {
-        width: 100%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
+.bxslider {
+    div{
+        width: 100% !important;
     }
+    
+}
+
+.flex-control-nav{
+    display: none;
 }
