@@ -48,6 +48,11 @@ h6 {
 p {
     font-size: $paragraph-size;
     text-align: justify;
+    line-height: 1.5;
+}
+
+.orange-text {
+    color: $primary-orange;
 }
 
 .primary-header {

@@ -28,6 +28,11 @@
     padding: 10px;
 }
 
+.short-row {
+    @extend .row;
+    max-width: 600px;
+}
+
 .row-special {
     width: 100%;
     padding: 2em 1em;
@@ -102,8 +107,13 @@
 }
 
 .sticky {
-    position: sticky;
-    top: -400px;
+     position: -webkit-sticky;
+     position: -moz-sticky;
+     position: -o-sticky;
+     position: -ms-sticky;
+     position: sticky;
+     top: 0;
+     z-index: 2;
 }
 
 
