@@ -5,11 +5,15 @@
 }
 
 .nav-item {
-    padding: 10px 20px;
+    
     border: 2px solid gray;
     margin-top: 5px;
     width: 300px;
     border-radius: 4px;
+    a {
+        padding: 10px 20px;
+        display: block;
+    }
     &:hover{
         cursor: pointer;
         color: $primary-blue;

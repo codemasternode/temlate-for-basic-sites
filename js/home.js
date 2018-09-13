@@ -16,10 +16,16 @@ $(document).ready(() => {
 
     backButton.click((e) => {
         e.preventDefault()
-        console.log($('main').offset().top)
-        console.log($(window).scrollTop())
         $('body,html').animate({
             scrollTop: $('main').offset().top - 100
+        }, 300)
+    })
+
+    $('#main_site a').click((e) => {
+        e.preventDefault()
+        let target = e.target.attributes.href.nodeValue
+        $('body,html').animate({
+            scrollTop: $(target).offset().top
         }, 300)
     })
 
