@@ -1,0 +1,29 @@
+.person-image {
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;;
+}
+
+.reference {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: $primary-orange;
+    margin-bottom: 20px;
+    @extend .col-orange;
+}
+
+.references {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#references {
+    background: $third;
+    h1 {
+        text-align: center;
+    }
+}
