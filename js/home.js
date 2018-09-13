@@ -7,8 +7,7 @@ $(document).ready(() => {
 
     function showOrHideBackButton() {
         if ($(this).scrollTop() > aboutUs.offset().top - 400 && $(window).width() > 1000) {
-            backButton.fadeIn('slow')
-            console.log('asd')
+            backButton.fadeIn('fast')
         } else {
             backButton.hide()
         }
@@ -24,8 +23,9 @@ $(document).ready(() => {
     $('#main_site a').click((e) => {
         e.preventDefault()
         let target = e.target.attributes.href.nodeValue
+        let to = $(target).offset().top - $(target).height() / 2
         $('body,html').animate({
-            scrollTop: $(target).offset().top
+            scrollTop: to
         }, 300)
     })
 
