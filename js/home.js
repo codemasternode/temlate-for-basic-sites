@@ -23,7 +23,13 @@ $(document).ready(() => {
     $('#main_site a').click((e) => {
         e.preventDefault()
         let target = e.target.attributes.href.nodeValue
-        let to = $(target).offset().top - $(target).height() / 2
+        let to
+        if(target === "#references") {
+            to = $(target).offset().top
+        }else{
+            to = $(target).offset().top - $(target).height() / 2
+        }
+        
         $('body,html').animate({
             scrollTop: to
         }, 300)

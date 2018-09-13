@@ -16,6 +16,12 @@
     @extend .col-orange;
 }
 
+@media screen and (max-width: 900px) {
+    .reference {
+        flex-direction: column;
+    }
+}
+
 .references {
     margin-top: 1rem;
     margin-bottom: 1rem;
