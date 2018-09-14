@@ -21,6 +21,18 @@ body {
     box-shadow: 0px 2px 8px 0px $secondary;
 }
 
+.col-blue {
+    background: $primary-blue;
+    box-shadow: 0px 2px 8px 0px $secondary;
+}
+
+.col-reverse {
+    * {
+        color: $primary !important;
+    }
+    background: $secondary !important;
+}
+
 .section {
     h1,h2,h3,h4,h5,h6 {
         text-align: center;
@@ -70,6 +82,8 @@ body {
 .col-3 {
     width: 40%;
 }
+
+
 
 .col-content {
     margin-left: 5vh;
