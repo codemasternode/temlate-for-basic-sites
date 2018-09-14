@@ -4,6 +4,7 @@ body {
 
 .container {
     padding: $container-padding;
+    margin-top: 10px;
     @media screen and (max-width: $screen-small){
         padding: $container-padding-small;
     }
