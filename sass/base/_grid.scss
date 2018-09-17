@@ -105,8 +105,8 @@ body {
         margin-right: auto;
     }
     .col-content {
-        margin-left: 10vh;
-        margin-right: 10vh;
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 }
 
@@ -128,8 +128,8 @@ body {
     }
 
     .col-orange {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0 !important; 
+        margin-right: 0 !important;
         width: 100%;
     }
 }

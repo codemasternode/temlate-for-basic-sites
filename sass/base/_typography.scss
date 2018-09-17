@@ -84,6 +84,9 @@ p {
     .short-paragraph {
         padding: 2rem 0;
     }
+    blockquote {
+        padding-left: 20px !important;
+    }
 }
 
 p.first-paragraph {            
@@ -113,8 +116,4 @@ blockquote {
     width:100%;
     z-index: 0;
     overflow: hidden;
-    }
-
-    blockquote span {
-        
-        }
+}
