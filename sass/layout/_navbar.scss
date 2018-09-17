@@ -3,6 +3,9 @@
         margin-left: 2px;
     }
     padding: 3rem 3rem !important;
+    @media screen and (max-width: 500px){
+        padding: 1em 1em !important;
+    }
 }
 
 .search {
