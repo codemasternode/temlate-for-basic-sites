@@ -28,15 +28,15 @@ $screen-small : 400px;
 $screen-medium : 760px;
 $screen-large: 1000px;
 
-$container-padding: 3em 3em;
+$container-padding: 8em 3em;
 $container-padding-small: 3em 15px;
 
 /*** Backgorund and colors on main page ***/
 $nav-background: $primary;
-$about_us-background: linear-gradient(-30deg, $third 0%,$third 95.5%,$secondary-blue 95.6%,$secondary-blue 100%);
+$about_us-background: linear-gradient(-30deg, $primary-blue 0%,$primary-blue 95.5%,$secondary-blue 95.6%,$secondary-blue 100%);
 $materials-background: $primary;
-$references-background: $third;
-$download_contact-background: $third;
+$references-background: $primary;
+$download_contact-background: $primary-blue;
 $footer-background: $primary;
 
 $nav-color: $secondary;
