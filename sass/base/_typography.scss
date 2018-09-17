@@ -79,7 +79,10 @@ p {
 
 @media screen and (max-width: 500px) {
     .section-paragraph {
-        padding: 0;
+        padding: 0 !important;
+    }
+    .short-paragraph {
+        padding: 2rem 0;
     }
 }
 
