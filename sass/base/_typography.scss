@@ -1,119 +1,37 @@
+body {
+    background: $background;
+}
+
 * {
-    color: $secondary;
-    font-family: $body-font;
+    color: $font-color;
+    // font-family: Infini_Roman;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: $headline-font;
-    font-weight: bold; 
-    width: 100%;
+@font-face {
+    font-family: Jappoki;
+    src: url('../assets/fonts/jappoki.otf');
 }
 
-h1 {
-    font-size: $h1-default-size;
-    margin-bottom: 0.5rem;
-    margin-top: 2rem;
+@font-face {
+    font-family: Infini_Roman;
+    src: url('../assets/fonts/infini-romain.ttf')
 }
 
-h2 {
-    font-size: $h2-default-size;
-    margin-bottom: 0.5rem;
-    margin-top: 1.8rem;
+
+h1,h2,h3,h4,h5,h6 { 
+    // font-family: Jappoki;
 }
 
-h3 {
-    font-size: $h3-default-size;
-    margin-bottom: 0.5rem;
-    margin-top: 1.6rem;
-}
-
-h4 {
-    font-size: $h4-default-size;
-    margin-bottom: 0.4rem;
-    margin-top: 1.5rem;
-}
-
-h5 {
-    font-size: $h5-default-size;
-    margin-bottom: 0.4rem;
-    margin-top: 1.2rem;
-}
-
-h6 {
-    font-size: $h6-default-size;
-    margin-bottom: 0.4rem;
-    margin-top: 1rem;
-}
-
-p {
-    font-size: $paragraph-size;
-    text-align: justify;
-    line-height: 1.5;
-}
-
-.orange-text {
-    color: $primary-orange;
-}
-
-.primary-header {
-    width: 100%;
-    text-align: center;
-}
-
-.section-paragraph {
-    padding: 0 8rem;
-    max-width: 1200px;
-    margin-top: 2rem;
-}
-
-.short-paragraph {
-    max-width: 900px;
-    padding: 0 4rem;
-}
-
-@media screen and (max-width: 950px) {
-    .section-paragraph {
-        padding: 0 3rem;
+%primary-information {
+    background: $background;
+    * {
+        color: $primary;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .section-paragraph {
-        padding: 0 !important;
+%secondary-information {
+    background: $background;
+    * {
+        color: $secondary;
     }
-    .short-paragraph {
-        padding: 2rem 0;
-    }
-    blockquote {
-        padding-left: 20px !important;
-    }
-}
-
-p.first-paragraph {            
-    &::first-letter {
-    font-size: 200%;
-    padding: 0 5px;
-    background-color: $primary-orange;
-;
-    color: $secondary;
-}
-
-}
-
-blockquote {
-    background:$primary;
-    border-left:8px solid $secondary-blue;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
-    color:$secondary;
-    font-size:1.1em;
-    font-style:italic;
-    font-weight:300;
-    line-height:1.6;
-    margin:50px auto;
-    padding:1.2em 30px 1.2em 60px;
-    position:relative;
-    vertical-align:super;
-    width:100%;
-    z-index: 0;
-    overflow: hidden;
 }

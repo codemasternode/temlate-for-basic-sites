@@ -1,15 +1,29 @@
-.navbar {
-    img {
-        margin-left: 2px;
-    }
-    padding: 3rem 3rem !important;
-    @media screen and (max-width: 500px){
-        padding: 1em 1em !important;
+nav {
+    border-top: 1px solid $primary;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+            a {
+                color: $secondary; 
+            }
+        }
+        a {
+            color: $primary;
+            font-size: 24px;
+        }
+        padding: 20px;
     }
 }
 
-.search {
-    color: $nav-color;
-    border-color: $secondary; 
-    background: $nav-background;
+.logo {
+    max-width: 150px;
+    height: auto;
 }

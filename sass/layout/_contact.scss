@@ -1,0 +1,14 @@
+.contact {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: inherit;
+    * {
+        min-width: 250px;
+        color: $background;
+    }
+}
+
+.contact-wrapper {
+    background: $primary;
+}

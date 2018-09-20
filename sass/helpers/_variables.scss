@@ -1,10 +1,9 @@
 /*** COLORS ***/
-$primary: white;
-$secondary: #364135;
-$third: rgb(179, 179, 179);
-$primary-orange: #F36E1E;
-$primary-blue: #6BB3DC;
-$secondary-blue: #3575B8;
+$primary: #3D75B5;
+$secondary: #F26D2C;
+$background: #FFF;
+
+$font-color: black;
 
 /*** USABLE VARIABLES ***/
 
@@ -27,22 +26,4 @@ $paragraph-size: 16px;
 $screen-small : 400px;
 $screen-medium : 760px;
 $screen-large: 1000px;
-
-$container-padding: 8em 3em;
-$container-padding-small: 3em 15px;
-
-/*** Backgorund and colors on main page ***/
-$nav-background: $primary;
-$about_us-background: linear-gradient(-30deg, $primary-blue 0%,$primary-blue 95.5%,$secondary-blue 95.6%,$secondary-blue 100%);
-$materials-background: $primary;
-$references-background: $primary;
-$download_contact-background: $primary-blue;
-$footer-background: $primary;
-
-$nav-color: $secondary;
-$about_us-color: $secondary;
-$materials-color: $secondary;
-$references-color: $secondary;
-$download_contact-color: $primary;
-$footer-color: $secondary;
 
