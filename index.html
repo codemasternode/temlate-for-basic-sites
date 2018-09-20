@@ -9,8 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:700|Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,7 +26,7 @@
             </div>
         </div>
     </section>
-    <nav class="row">
+    <nav class="row nav">
         <img src="./assets/img/logo.png" alt="logo" class="logo">
         <ul class="navigation">
             <li>
@@ -60,20 +59,45 @@
     <section class="slider">
         <div class="slide" id="first">
             <div class="black"></div>
-            <div class="content">Lorem ipsum dolor sit amet</div>
         </div>
         <div class="slide" id="second">
             <div class="black"></div>
-            <div class="content">Lorem ipsum dolor sit amet</div>
         </div>
 
         <div class="slide" id="third">
             <div class="black"></div>
-            <div class="content">Lorem ipsum dolor sit amet</div>
         </div>
         <!-- Navigation arrows -->
         <span class="arrow arrow-left" onclick="changeSlide(-1)">Left</span>
         <span class="arrow arrow-right" onclick="changeSlide(1)">Right</span>
+    </section>
+    <section class="container-fluid">
+        <div class="row about_us">
+            <div class="col col-5">
+                <h1 class="section-header">O nas</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio lectus, maximus ornare suscipit sed, euismod eget neque.
+                    Sed varius finibus elementum. Proin nec orci id libero aliquet varius. Vestibulum vitae lorem vel odio
+                    dapibus interdum. Integer porta lorem eu ipsum iaculis fringilla.
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row abilites">
+                <div class="col col-4">
+                    <img src="./assets/img/Tanio.png" alt="Tanio">
+                    <h2>Tanio</h2>
+                </div>
+                <div class="col col-4">
+                    <img src="./assets/img/Szybko.png" alt="Szybko">
+                    <h2>Szybko</h2>
+                </div>
+                <div class="col col-4">
+                    <img src="./assets/img/Profesjonalnie.png" alt="Profesjonalnie">
+                    <h2>Profesjonalnie</h2>
+                </div>
+            </div>
+        </div>
     </section>
     <script type="text/javascript">  
         let slides = document.querySelectorAll('.slide')
@@ -89,9 +113,10 @@
             } else {
                 move(slides[now], 100)
                 move(slides[now - 1], 100)
-                track(slides[now - 1], -100)
+                track(slides[now + 1], -100)
                 now--;
             }
+            console.log(slides[-1])
         }
 
         function move(element, to) {

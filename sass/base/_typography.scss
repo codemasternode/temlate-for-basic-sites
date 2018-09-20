@@ -4,26 +4,46 @@ body {
 
 * {
     color: $font-color;
-    // font-family: Infini_Roman;
+    font-family: 'Lato', sans-serif;
 }
-
-@font-face {
-    font-family: Jappoki;
-    src: url('../assets/fonts/jappoki.otf');
-}
-
-@font-face {
-    font-family: Infini_Roman;
-    src: url('../assets/fonts/infini-romain.ttf')
-}
-
 
 h1,h2,h3,h4,h5,h6 { 
-    // font-family: Jappoki;
+    font-family: 'Alegreya', serif;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 %primary-information {
     background: $background;
+    color: $primary;
     * {
         color: $primary;
     }
@@ -31,7 +51,16 @@ h1,h2,h3,h4,h5,h6 {
 
 %secondary-information {
     background: $background;
+    color: $primary;
     * {
         color: $secondary;
     }
+}
+
+.section-header {
+    @extend %primary-information;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
